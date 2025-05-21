@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background: #f0f2f5; /* light background */
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.dark {
+  background: #121212; /* dark background */
+  color: #eee;
+}
+
+/* Container background */
+.container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9); /* light container bg */
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark .container {
+  background: rgba(25, 25, 25, 0.85); /* dark container bg */
+}
+
+/* ... rest unchanged ... */
+
+
+/* ... rest unchanged ... */
+
+
+/* Navigation Bar */
+nav {
+  background: #4e9af1;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+nav.dark {
+  background: #1f6dbf;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+button, .glow-btn {
+  padding: 0.7rem 1.8rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  background: #4e9af1;
+  color: white;
+  box-shadow: 0 0 8px #4e9af1;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+button:hover, .glow-btn:hover {
+  background: #3c82d8;
+  box-shadow: 0 0 20px #4e9af1, 0 0 40px #4e9af1;
+}
+
+/* Inputs */
+input, select, textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0 1rem 0;
+  border: 1.8px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #4e9af1;
+  outline: none;
+}
+
+/* Dark input */
+body.dark input, body.dark select, body.dark textarea {
+  background: #222;
+  border-color: #555;
+  color: #eee;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* Dark mode toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  margin-left: 1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4e9af1;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 1.5rem;
+    padding: 1.5rem;
+  }
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  nav a {
+    margin: 0.5rem 0;
+  }
+}

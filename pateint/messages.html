@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patient Portal - Messages</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div><strong>Patient Portal</strong></div>
+    <div class="nav-links">
+      <a href="login.html">Login</a>
+      <a href="patient-details.html">Patient Details</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="appointments.html">Appointments</a>
+      <a href="medical-records.html">Medical Records</a>
+      <a href="prescriptions.html">Prescriptions</a>
+      <a href="messages.html">Messages</a>
+      <a href="settings.html">Settings</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Messages</h2>
+    <section>
+      <h3>Inbox</h3>
+      <ul>
+        <li><strong>Dr. Smith:</strong> Your test results are normal. Keep up the good work!</li>
+        <li><strong>Clinic Reception:</strong> Reminder: Your appointment is scheduled for May 22.</li>
+        <li><strong>Dr. Lee:</strong> Please schedule a follow-up appointment.</li>
+      </ul>
+    </section>
+
+    <section style="margin-top: 2rem;">
+      <h3>Send a Message</h3>
+      <form onsubmit="event.preventDefault(); alert('Message sent!'); this.reset();">
+        <label for="recipient">To</label>
+        <select id="recipient" required>
+          <option value="" disabled selected>Select recipient</option>
+          <option>Dr. Smith</option>
+          <option>Dr. Lee</option>
+          <option>Clinic Reception</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Type your message here" required></textarea>
+
+        <button type="submit" class="glow-btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

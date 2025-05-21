@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patient Portal - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body></body>
+
+  <nav>
+    <div><strong>Patient Portal</strong></div>
+  </nav>
+
+  <main class="container">
+    <h2>Login</h2>
+    <form onsubmit="event.preventDefault(); window.location.href='patient-details.html';">
+      <label for="username">Username</label>
+      <input id="username" type="text" placeholder="Enter username" required />
+      
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Enter password" required />
+      
+      <button type="submit" class="glow-btn">Login</button>
+    </form>
+    <div style="margin-top: 1rem;">
+      <label for="darkmodeToggle">Dark Mode</label>
+      <label class="switch">
+        <input type="checkbox" id="darkmodeToggle" checked />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('darkmodeToggle');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+
+</body>
+</html>

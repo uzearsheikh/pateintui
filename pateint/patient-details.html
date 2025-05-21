@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patient Portal - Patient Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div><strong>Patient Portal</strong></div>
+    <div class="nav-links">
+      <a href="login.html">Login</a>
+      <a href="patient-details.html">Patient Details</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="appointments.html">Appointments</a>
+      <a href="medical-records.html">Medical Records</a>
+      <a href="prescriptions.html">Prescriptions</a>
+      <a href="messages.html">Messages</a>
+      <a href="settings.html">Settings</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Patient Details Form</h2>
+    <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+      <label for="fullname">Full Name</label>
+      <input id="fullname" type="text" placeholder="Your full name" required />
+
+      <label for="age">Age</label>
+      <input id="age" type="number" min="0" max="120" placeholder="Your age" required />
+
+      <label for="gender">Gender</label>
+      <select id="gender" required>
+        <option value="" disabled selected>Select gender</option>
+        <option>Female</option>
+        <option>Male</option>
+        <option>Other</option>
+        <option>Prefer not to say</option>
+      </select>
+
+      <label for="contact">Contact Number</label>
+      <input id="contact" type="tel" placeholder="Phone number" required />
+
+      <label for="address">Address</label>
+      <textarea id="address" rows="3" placeholder="Your address" required></textarea>
+
+      <button type="submit" class="glow-btn">Save & Continue</button>
+    </form>
+  </main>
+
+</body>
+</html>
